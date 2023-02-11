@@ -24,4 +24,6 @@ jobs:
           name: 'tylersorensen.eth'
           key: 'ipfs'
           value: 'test'
+          defenderApiKey: ${{ secrets.DEFENDER_API_KEY }}
+          defenderApiSecret: ${{ secrets.DEFENDER_API_SECRET }}
           chaidId: 5
