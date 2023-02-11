@@ -14,7 +14,7 @@ If you are new, there's also a simpler introduction.  See the [Hello World JavaS
 
 Click the `Use this Template` and provide the new repo details for your action
 
-## Code in Main
+## Code in Index
 
 > First, you'll need to have a reasonably modern version of `node` handy. This won't work with versions older than 9, for instance.
 

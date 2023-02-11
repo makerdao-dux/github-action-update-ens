@@ -25,7 +25,7 @@ module.exports = JSON.parse('{"contractName":"Resolver","abi":[{"anonymous":fals
 
 /***/ }),
 
-/***/ 3109:
+/***/ 4822:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -25533,7 +25533,7 @@ const WebSocket = __nccwpck_require__(6331);
 WebSocket.createWebSocketStream = __nccwpck_require__(998);
 WebSocket.Server = __nccwpck_require__(9119);
 WebSocket.Receiver = __nccwpck_require__(5523);
-WebSocket.Sender = __nccwpck_require__(4822);
+WebSocket.Sender = __nccwpck_require__(1803);
 
 module.exports = WebSocket;
 
@@ -27221,7 +27221,7 @@ function error(ErrorCtor, message, prefix, statusCode) {
 
 /***/ }),
 
-/***/ 4822:
+/***/ 1803:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28361,7 +28361,7 @@ const { URL } = __nccwpck_require__(8835);
 
 const PerMessageDeflate = __nccwpck_require__(2065);
 const Receiver = __nccwpck_require__(5523);
-const Sender = __nccwpck_require__(4822);
+const Sender = __nccwpck_require__(1803);
 const {
   BINARY_TYPES,
   EMPTY_BUFFER,
@@ -85827,7 +85827,7 @@ module.exports = require("zlib");
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __nccwpck_require__(3109);
+/******/ 	var __webpack_exports__ = __nccwpck_require__(4822);
 /******/ 	module.exports = __webpack_exports__;
 /******/ 	
 /******/ })()
