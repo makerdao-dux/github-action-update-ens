@@ -1,8 +1,8 @@
 import * as core from '@actions/core';
-import ethers from 'ethers';
+//import ethers from 'ethers';
 import {
   DefenderRelayProvider,
-  DefenderRelaySigner
+  //DefenderRelaySigner
 } from 'defender-relay-client/lib/ethers';
 // @ts-ignore
 import ENS, { getEnsAddress } from '@ensdomains/ensjs';
@@ -17,10 +17,10 @@ async function run(): Promise<void> {
 
     const credentials = { apiKey: DEFENDER_API_KEY, apiSecret: DEFENDER_API_SECRET };
     const provider = new DefenderRelayProvider(credentials);
-    const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
+    //const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
 
     const ens = new ENS({ provider, ensAddress: getEnsAddress('5') }); //5 for mainnet
-    const tx = ens.name(NAME).setText();
+    const tx = ens.name(NAME).setText(NAME, KEY, VALUE);
     console.log('tx', tx);
 
   } catch (error) {
