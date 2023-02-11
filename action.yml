@@ -1,11 +1,31 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Update ENS'
+description: 'Updates ENS text record(s)'
+branding:
+  icon: 'award'
+  color: 'green'
 inputs:
-  milliseconds: # change this
+  name:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'ens name to update'
+  key:
+    required: true
+    description: 'key to update'
+  value:
+    required: true
+    description: 'new value'
+  defenderApiKey:
+    required: true
+    description: 'defender relay api key'
+  defenderApiSecret:
+    required: true
+    description: 'defender relay api secret'
+  chainId:
+    required: false
+    description: 'chain id (1 for mainnet, 5 for goerli)'
+    default: 1
+outputs:
+  transaction:
+    description: 'transaction returned from defender relay'
 runs:
   using: 'node16'
-  main: 'dist/index.js'
+  main: 'lib/index.js'
