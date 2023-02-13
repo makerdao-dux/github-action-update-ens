@@ -23,6 +23,7 @@ async function run(): Promise<void> {
     core.debug('ens');
     core.debug(ens);
     const text = await ens.name(NAME).getText('ipfs');
+    core.setOutput('text', text);
     core.debug('text');
     core.debug(text);
     const tx = await ens.name(NAME).setText(NAME, KEY, VALUE);
