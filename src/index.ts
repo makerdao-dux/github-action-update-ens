@@ -20,14 +20,14 @@ async function run(): Promise<void> {
     //const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
 
     const ens = new ENS({ provider, ensAddress: getEnsAddress('5') }); //5 for goerli
-    core.info('ens');
-    core.info(ens);
+    core.debug('ens');
+    core.debug(ens);
     const text = await ens.name(NAME).getText('ipfs');
-    core.info('text');
-    core.info(text);
+    core.debug('text');
+    core.debug(text);
     const tx = await ens.name(NAME).setText(NAME, KEY, VALUE);
-    core.info('tx');
-    core.info(tx);
+    core.debug('tx');
+    core.debug(tx);
 
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message);
