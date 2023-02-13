@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          name: 'tylersorensen.eth'
+          name: 'makerdaodux.eth'
           key: 'ipfs'
           value: 'test'
           defenderApiKey: ${{ secrets.DEFENDER_API_KEY }}

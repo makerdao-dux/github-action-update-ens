@@ -20,7 +20,7 @@ async function run(): Promise<void> {
     //const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
 
     const ens = new ENS({ provider, ensAddress: getEnsAddress('5') }); //5 for mainnet
-    const tx = ens.name(NAME).setText(NAME, KEY, VALUE);
+    const tx = await ens.name(NAME).setText(NAME, KEY, VALUE);
     console.log('tx', tx);
 
   } catch (error) {
