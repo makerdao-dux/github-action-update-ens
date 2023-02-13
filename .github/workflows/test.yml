@@ -26,4 +26,4 @@ jobs:
           value: 'test'
           defenderApiKey: ${{ secrets.DEFENDER_API_KEY }}
           defenderApiSecret: ${{ secrets.DEFENDER_API_SECRET }}
-          chaidId: 5
+          chainId: 5

@@ -19,7 +19,9 @@ async function run(): Promise<void> {
     const provider = new DefenderRelayProvider(credentials);
     //const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
 
-    const ens = new ENS({ provider, ensAddress: getEnsAddress('5') }); //5 for mainnet
+    const ens = new ENS({ provider, ensAddress: getEnsAddress('5') }); //5 for goerli
+    console.log('ens', ens);
+    const text = await ens.name(NAME).getText('ipfs');
     const tx = await ens.name(NAME).setText(NAME, KEY, VALUE);
     console.log('tx', tx);
 
