@@ -18,7 +18,7 @@ async function run(): Promise<void> {
     const credentials = { apiKey: DEFENDER_API_KEY, apiSecret: DEFENDER_API_SECRET };
     const provider = new DefenderRelayProvider(credentials);
     //const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
-
+    core.setOutput('provider', provider);
     const ens = new ENS({ provider, ensAddress: getEnsAddress('5') }); //5 for goerli
     core.debug('ens');
     core.debug(ens);
