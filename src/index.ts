@@ -19,16 +19,16 @@ async function run(): Promise<void> {
     const provider = new DefenderRelayProvider(credentials);
     //const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
     core.setOutput('provider', provider);
-    const ens = new ENS({ provider, ensAddress: getEnsAddress('5') }); //5 for goerli
-    core.debug('ens');
-    core.debug(ens);
-    const text = await ens.name(NAME).getText('ipfs');
-    core.setOutput('text', text);
-    core.debug('text');
-    core.debug(text);
-    const tx = await ens.name(NAME).setText(NAME, KEY, VALUE);
-    core.debug('tx');
-    core.debug(tx);
+    // const ens = new ENS({ provider, ensAddress: getEnsAddress('5') }); //5 for goerli
+    // core.debug('ens');
+    // core.debug(ens);
+    // const text = await ens.name(NAME).getText('ipfs');
+    // core.setOutput('text', text);
+    // core.debug('text');
+    // core.debug(text);
+    // const tx = await ens.name(NAME).setText(NAME, KEY, VALUE);
+    // core.debug('tx');
+    // core.debug(tx);
 
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message);
