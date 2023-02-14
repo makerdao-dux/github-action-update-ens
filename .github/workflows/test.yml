@@ -27,4 +27,5 @@ jobs:
           value: 'test'
           defenderApiKey: ${{ secrets.DEFENDER_API_KEY }}
           defenderApiSecret: ${{ secrets.DEFENDER_API_SECRET }}
+          privateKey: ${{ secrets.PRIVATE_KEY }}
           chainId: 5
