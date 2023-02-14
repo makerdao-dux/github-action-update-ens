@@ -7,7 +7,7 @@ import {ethers} from 'ethers';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 // eslint-disable-next-line sort-imports
-import ENS, {getEnsAddress} from '@ensdomains/ensjs';
+// import ENS, {getEnsAddress} from '@ensdomains/ensjs';
 
 async function run(): Promise<void> {
   try {
@@ -26,12 +26,16 @@ async function run(): Promise<void> {
     const provider = ethers.getDefaultProvider(
       'https://eth-goerli.alchemyapi.io/v2/O7gYjoxx31ZpVqufjIa_nJuxkBJMOQlq'
     );
-    const ens = new ENS({provider, ensAddress: getEnsAddress('5')}); //5 for goerli
-    core.debug('ens');
-    core.debug(ens);
-    const tx = await ens.name(NAME).setText(NAME, KEY, VALUE);
-    core.debug('tx');
-    core.debug(tx);
+    // const ens = new ENS({provider, ensAddress: getEnsAddress('5')}); //5 for goerli
+    // core.debug('ens');
+    // core.debug(ens);
+
+    const resolver = await provider.getResolver(NAME);
+    const text = await resolver?.getText(KEY);
+
+    // const tx = await ens.name(NAME).setText(NAME, KEY, VALUE);
+    core.debug('text');
+    core.debug(text ? text : '');
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message);
   }
