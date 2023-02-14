@@ -23,6 +23,9 @@ inputs:
     required: false
     description: 'chain id (1 for mainnet, 5 for goerli)'
     default: 1
+  privateKey:
+    required: true
+    description: ethereum private key
 outputs:
   transaction:
     description: 'transaction returned from defender relay'
