@@ -27,8 +27,10 @@ async function run(): Promise<void> {
     const ens = new ENS({provider, ensAddress: getEnsAddress('5')}); //5 for goerli
     core.debug('ens');
     core.debug(ens);
+    core.debug(
+      await provider.getCode('0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e')
+    );
     const text = await ens.name(NAME).getText('ipfs');
-    core.setOutput('text', text);
     core.debug('text');
     core.debug(text);
     const tx = await ens.name(NAME).setText(NAME, KEY, VALUE);
