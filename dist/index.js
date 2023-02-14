@@ -58,12 +58,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
-const ethers_1 = __importDefault(__nccwpck_require__(108));
+const ethers_1 = __nccwpck_require__(108);
 // import {
 //   DefenderRelayProvider
 //   //DefenderRelaySigner
@@ -86,7 +83,7 @@ function run() {
             // };
             // const provider = new DefenderRelayProvider(credentials);
             //const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
-            const provider = ethers_1.default.getDefaultProvider(5);
+            const provider = ethers_1.ethers.getDefaultProvider(5);
             const ens = new ensjs_1.default({ provider, ensAddress: (0, ensjs_1.getEnsAddress)('5') }); //5 for goerli
             core.debug('ens');
             core.debug(ens);
