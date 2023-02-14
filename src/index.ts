@@ -1,9 +1,9 @@
 import * as core from '@actions/core';
-//import ethers from 'ethers';
-import {
-  DefenderRelayProvider
-  //DefenderRelaySigner
-} from 'defender-relay-client/lib/ethers';
+import ethers from 'ethers';
+// import {
+//   DefenderRelayProvider
+//   //DefenderRelaySigner
+// } from 'defender-relay-client/lib/ethers';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 // eslint-disable-next-line sort-imports
@@ -14,15 +14,16 @@ async function run(): Promise<void> {
     const NAME = core.getInput('name');
     const KEY = core.getInput('key');
     const VALUE = core.getInput('value');
-    const DEFENDER_API_KEY = core.getInput('defenderApiKey');
-    const DEFENDER_API_SECRET = core.getInput('defenderApiSecret');
+    // const DEFENDER_API_KEY = core.getInput('defenderApiKey');
+    // const DEFENDER_API_SECRET = core.getInput('defenderApiSecret');
 
-    const credentials = {
-      apiKey: DEFENDER_API_KEY,
-      apiSecret: DEFENDER_API_SECRET
-    };
-    const provider = new DefenderRelayProvider(credentials);
+    // const credentials = {
+    //   apiKey: DEFENDER_API_KEY,
+    //   apiSecret: DEFENDER_API_SECRET
+    // };
+    // const provider = new DefenderRelayProvider(credentials);
     //const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
+    const provider = ethers.getDefaultProvider(5);
 
     const ens = new ENS({provider, ensAddress: getEnsAddress('5')}); //5 for goerli
     core.debug('ens');
