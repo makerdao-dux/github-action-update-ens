@@ -23,7 +23,9 @@ async function run(): Promise<void> {
     // };
     // const provider = new DefenderRelayProvider(credentials);
     //const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
-    const provider = ethers.getDefaultProvider('goerli');
+    const provider = ethers.getDefaultProvider(
+      'https://rpc.ankr.com/eth_goerli'
+    );
     const ens = new ENS({provider, ensAddress: getEnsAddress('5')}); //5 for goerli
     core.debug('ens');
     core.debug(ens);
