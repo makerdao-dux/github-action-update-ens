@@ -83,7 +83,7 @@ function run() {
             // };
             // const provider = new DefenderRelayProvider(credentials);
             //const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
-            const provider = ethers_1.ethers.getDefaultProvider(5);
+            const provider = ethers_1.ethers.getDefaultProvider('goerli');
             const ens = new ensjs_1.default({ provider, ensAddress: (0, ensjs_1.getEnsAddress)('5') }); //5 for goerli
             core.debug('ens');
             core.debug(ens);
