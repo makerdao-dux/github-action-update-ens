@@ -24,7 +24,7 @@ async function run(): Promise<void> {
     // const provider = new DefenderRelayProvider(credentials);
     //const signer = new DefenderRelaySigner(credentials, provider, { speed: 'fast' });
     const provider = ethers.getDefaultProvider(
-      'https://rpc.ankr.com/eth_goerli'
+      'https://eth-goerli.alchemyapi.io/v2/O7gYjoxx31ZpVqufjIa_nJuxkBJMOQlq'
     );
     const ens = new ENS({provider, ensAddress: getEnsAddress('5')}); //5 for goerli
     core.debug('ens');
